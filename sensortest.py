@@ -2,8 +2,6 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 import time
- 
-#GPIO Mode (BOARD / BCM)
 
  
 #set GPIO Pins
@@ -48,5 +46,3 @@ if __name__ == '__main__':
             print ("Measured Distance = %.1f cm" % dist)
             time.sleep(1)
  
-
-    
