@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
-from sensortest import *
+from newsensortest import *
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(3, GPIO.OUT)
 GPIO.setup(5, GPIO.OUT)
@@ -22,11 +22,7 @@ while True:
         GPIO.output(5, False)   #motor 1
         GPIO.output(7, True)    #enable motor 1
         
-        for a in range (5):
-            if distance()<5:
-                break
-            else:
-                sleep(.1) 
+        sleep(1)
         
         
         GPIO.output(3, False)
@@ -35,17 +31,17 @@ while True:
         
 
     else:
-        if input1=='go'and distance()>10:
+        if input1=='go':
             
             GPIO.output(3, False)    
             GPIO.output(5, True)   
             GPIO.output(7,True)
            
-            for n in range (5):
-                if distance()<5:
+            for n in range (10):
+                if distance()<50:
                     break
                 else:
-                    sleep(.1) 
+                    sleep(.05) 
             GPIO.output(3, False)
             GPIO.output(5, False)
             GPIO.output(7,False)
