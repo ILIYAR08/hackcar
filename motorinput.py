@@ -23,10 +23,10 @@ while True:
         GPIO.output(7, True)    #enable motor 1
         
         for a in range (5):
-                    if distance()<5:
-                        break
-                    else:
-                        sleep(.1) 
+            if distance()<5:
+                break
+            else:
+                sleep(.1) 
         
         
         GPIO.output(3, False)
@@ -81,10 +81,10 @@ while True:
                     GPIO.output(15, True) 
                     
                     for b in range (5):
-                    if distance()<5:
-                        break
-                    else:
-                        sleep(.1)
+                        if distance()<5:
+                            break
+                        else:
+                            sleep(.1)
                     
                     GPIO.output(3, False)
                     GPIO.output(5, False) #disable motor 1
